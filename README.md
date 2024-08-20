@@ -2,7 +2,7 @@
 ![Terminal Screenshot](./assets/terminal_screenshot.png)
 
 ## Introduction
-This is a public repository for my concurrent matrix multiplication program written in C, which uses fork and pipe to calculate the resultant matrix from multiplying the two input matrices.
+This is a public repository for my concurrent matrix multiplication program written in C, which uses fork and pipe to calculate the resultant MxP matrix by multiplying the two input matrices, MxN and NxP.
 
 ## How It Works
   - Take in the elements of Matrix A and Matrix B from stdin
@@ -20,5 +20,7 @@ This is a public repository for my concurrent matrix multiplication program writ
   - Navigate to `/matrix_multiplication`
   - Run the `make` command
   - Run `./matrix_multiplication`
-  - Enter the dimensions for Matrix A separated by spaces
-  - Enter the dimensions for Matrix B separated by spaces
+  - Enter the dimensions for Matrix A, separated by spaces (MxN --> M N)
+  - Enter the dimensions for Matrix B, separated by spaces (NxP --> N P)
+  - Enter the elements for Matrix A, separated by spaces (M*N Elements)
+  - Enter the elements for Matrix B, separated by spaces (N*P Elements)
