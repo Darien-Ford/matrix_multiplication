@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-#include <time.h>
 
 int main()
 {
@@ -131,9 +130,6 @@ int main()
         char elementsB[256];
         char* num;
 
-        clock_t t;
-        double time = 0;
-
         printf("\nEnter The Elements For Matrix A, Seperated By Spaces (%d).\n", n*x);
         
         fgets(elementsA, 256, stdin);
@@ -185,8 +181,6 @@ int main()
             }
             printf("\n");
         }
-        
-        t = clock();
 
         // Send elements from Matrices A and B to boundary processes
         for (k = 0; k < x; k++)
@@ -212,9 +206,6 @@ int main()
             matrixC[result[0]][result[1]] = result[2];
         }
 
-        t = clock() - t;
-        time = ((double)t)/CLOCKS_PER_SEC;
-        
         printf("\nResult (%dx%d)\n", n, m);
         
         for (i = 0; i < n; i++)
@@ -225,7 +216,5 @@ int main()
             }
             printf("\n");
         }
-
-        printf("\nTime To Calculate: %f msec\n\n", time*1000);
     }
 }
